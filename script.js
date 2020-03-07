@@ -12,6 +12,24 @@ function writePassword()
   // Alerting the User that they will be prompted to provide criteria and to confirm their choices
   alert("You will be prompted with several password criteria selections:");
   var passwordLength = prompt("Please provide password length between 8 and 128 characters:");
+
+  var passwordLengthChar = "";
+  for(var i=0; i<passwordLength.length; i++){
+    passwordLengthChar = passwordLength.charAt(i);
+    //alert(i+" passwordLengthChar "+passwordLengthChar);
+    if (passwordLengthChar != "0" && passwordLengthChar != "1" && passwordLengthChar != "2" &&
+        passwordLengthChar != "3" && passwordLengthChar != "4" && passwordLengthChar != "5" && passwordLengthChar != "6" &&
+        passwordLengthChar != "7" && passwordLengthChar != "8" && passwordLengthChar != "9"){
+        alert("You must enter a numeric value between 8 and 128. Please click on generate password and try again");
+        return;
+    }
+  }
+  
+  if (passwordLength < 8 || passwordLength > 128){
+    alert("The password length must be between 8 and 128. Please click on generate password and try again");
+    return;
+  }
+
   var includeLowercase = confirm("Do you want to include Lowercase?");
   var includeUppercase = confirm("Do you want to include Uppercase?");
   var includeNumbers = confirm("Do you want to include Numbers?");
