@@ -1,22 +1,27 @@
 var generateBtn = document.querySelector("#generate");
 var finalresult = "";
 
-// Write password to the #password input
+// Adding event listener to generate button and calling Writepassword Function
+generateBtn.addEventListener("click", writePassword);
 
-function writePassword() {
-  // Alerting the User that they will be prompted to provide criteria
-  alert("you will be prompted for several password criteria selections depending on which a new, secure password will be generated");
-  var passwordLength = prompt("Provide password length between 8 and 128 characters");
-  var includeLowercase = confirm("Want to include lowercase?");
-  var includeUppercase = confirm("Want to include uppercase?");
-  var includeNumbers = confirm("Want to include numbers?");
-  var includeSpecialChars = confirm("Want to include special characters?");
+// Write password to the #password input
+function writePassword()
+ {
   var passwordText = document.querySelector("#password");
+  passwordText.value ="Your Secure Password";
+  // Alerting the User that they will be prompted to provide criteria and to confirm their choices
+  alert("You will be prompted with several password criteria selections:");
+  var passwordLength = prompt("Please provide password length between 8 and 128 characters:");
+  var includeLowercase = confirm("Do you want to include Lowercase?");
+  var includeUppercase = confirm("Do you want to include Uppercase?");
+  var includeNumbers = confirm("Do you want to include Numbers?");
+  var includeSpecialChars = confirm("Do you want to include Special characters?");
+  
 
   // Check condition - If user doesn't provide any criteria they will be alerted again to select criteria
   if (!includeLowercase && !includeUppercase && !includeNumbers && !includeSpecialChars)
   {
-      alert("You must select atleast one character type. Please click on generate password and try again");
+      alert("You must select atleast one character type. Please click on generate password and try again.");
       passwordText.value = "Your Secure Password";
     }else
     {
@@ -61,13 +66,9 @@ function generatePassword(passwordLength, includeLowercase, includeUppercase, in
         password += specialChars.substring(character, character + 1);
     }                
     
-    for (var i = password.length; i < pwdLength; i++) {
+    for (var i = password.length; i < passwordLength; i++) {
         character = Math.floor(Math.random() * all.length);
-        alert("character is "+character+" value is "+all.substring(character, character + 1));
         password += all.substring(character, character + 1);
     }
     finalresult = password;
 }
-
-// Adding event listener to generate button
-generateBtn.addEventListener("click", writePassword);

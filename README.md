@@ -9,7 +9,15 @@ Web browser
 
 ## Usage/Walkthrough Steps:
 
-1) When user loads the application , they will be presented with initial screen
+1) User logs into application , clicks on Generate Password Button
+2) Application will throw an alert to user that they will prompted for criteria selection 
+3) Once the user confirms it , system will prompt them to enter the length of the desired password
+4) User will then be presented with criteria selection (like lower case, Upper case , numbers and special characters)
+5) Once user confirms the selections , system will generate password based on their selected criteria
+
+Alternate Scenarios:
+
+1) If user doesn't provide any one of the password selection criteria, system will throw an alert stating you need to select/specify one criteria.
 
 ## Built with:
 Javascript - Programming Language
