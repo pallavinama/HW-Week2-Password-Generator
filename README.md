@@ -4,6 +4,8 @@ Password Generator
 ## Project Description
 This application is built to generate random password to the end user based on their selected/input criteria. User will be prompted with series of prompts like to enter the length of desired password, whether to include numeric, upper case , lower case or numbers in their password and based on their input selection , system will be generating a random password.
 
+Web URL : https://pallavinama.github.io/HW-Week2-Password-Generator/
+
 ## Prerequisites:
 Web browser
 
