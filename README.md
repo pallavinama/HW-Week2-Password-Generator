@@ -6,6 +6,8 @@ This application is built to generate random password to the end user based on t
 
 Web URL : https://pallavinama.github.io/HW-Week2-Password-Generator/
 
+![SS-Password Generator](https://user-images.githubusercontent.com/61402034/77220114-49819080-6b13-11ea-919f-0ac37ea710a0.png)
+
 ## Prerequisites:
 Web browser
 
